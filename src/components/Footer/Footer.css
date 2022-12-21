@@ -1,0 +1,116 @@
+.footer {
+    background-color: #202020;
+    padding: 0 70px;
+    margin: 0;
+}
+
+.footer__title {
+    padding-top: 79px;
+    margin: 0 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #8B8B8B;
+}
+
+.footer__container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #424242;
+}
+
+.footer__copyright {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.footer__links {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.footer__link {
+    font-family: 'Inter';
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    margin-right: 20px;
+    transition: .5s;
+}
+
+
+
+.footer__link:hover {
+    opacity: .5;
+}
+
+.footer__link:last-child {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer {
+        padding: 0 10px 10px 10px;
+    }
+
+    .footer__title {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        padding-bottom: 0;
+        padding-top: 30px;
+        margin-top: 21px;
+    }
+
+    .footer__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+
+    .footer__link {
+        margin-top: 12px;
+        margin-right: 0;
+    }
+
+    .footer__link:first-of-type {
+        margin: 0;
+    }
+
+    .footer__link:last-child {
+        margin-top: 12px;
+    }
+
+    .footer__copyright {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #8B8B8B;
+        order: 2;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+}

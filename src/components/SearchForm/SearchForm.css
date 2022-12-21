@@ -1,0 +1,111 @@
+.search {
+    margin: 0;
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+}
+
+.search__form {
+    margin: 80px 0 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 0 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202020;
+}
+
+.search__input {
+    border: none;
+    background-color: #2f2f2f;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    transition: .3s;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search__input:focus {
+    background-color: #F4F4F4;
+}
+
+.search__submit {
+    border: none;
+    background: #4285F4;
+    border-radius: 3px;
+    width: 70px;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: .5s;
+    cursor: pointer;
+    outline: none;
+}
+
+.search__submit:hover {
+    opacity: .5;
+}
+
+.search__filter-container {
+    margin: 30px 0 0 0;
+    padding-bottom: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border-bottom: 1px solid #424242;
+}
+
+.search__filter-button {
+    border: none;
+    background-color: #202020;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search__filter {
+    width: 36px;
+    height: 20px;
+    transition: .3s;
+}
+
+.search__filter-text {
+    margin: 0 0 0 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .search {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search {
+        padding: 0 14px;
+    }
+
+    .search__input {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

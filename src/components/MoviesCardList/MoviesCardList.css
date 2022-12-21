@@ -1,0 +1,14 @@
+.card-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .card-list {}
+}
+
+@media screen and (max-width: 550px) {
+    .card-list {}
+}
