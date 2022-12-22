@@ -1,0 +1,141 @@
+.list {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    transition: .6s;
+    display: none;
+}
+
+.list_active {
+    display: block;
+}
+
+.list__container {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    background-color: #202020;
+    height: 100vh;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 22px;
+}
+
+.list__exit {
+    width: 22px;
+    height: 22px;
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    background-color: #202020;
+    transition: .5s;
+}
+
+.list__exit:hover {
+    opacity: .5;
+}
+
+.list__exit-icon {
+    width: 22px;
+    height: 22px;
+    transform: rotate(0deg);
+}
+
+.list__content {
+    margin: 106px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0;
+}
+
+.list__link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    background-color: #202020;
+    text-decoration: none;
+    margin: 28px 0 0 0;
+    transition: .5s;
+    color: #fff;
+    padding-bottom: 4px;
+}
+
+.list__link:hover {
+    opacity: .5;
+    text-decoration: underline;
+}
+
+.list__profile-icon {
+    padding: 8px 7px;
+    background: #202020;
+    border-radius: 4px;
+    background-color: #313131;
+    border-radius: 6px;
+}
+
+.list__link-profile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 17px 0 0;
+    transition: .5s;
+    color: #fff;
+    background-color: #202020;
+}
+
+.list__link-profile:hover {
+    border-bottom: 1px solid white;
+}
+
+.list__link-button {
+    border: none;
+    text-decoration: none;
+    background-color: #202020;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 50vh 0 10vh 0;
+    padding: 0 0 4px 0;
+    color: white;
+}
+
+@media screen and (max-width: 320px) {
+    .list__container {
+        width: 320px;
+        padding: 0;
+    }
+
+    .list__link {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .list__link-profile {
+        margin: 0;
+        padding: 0;
+    }
+
+    .list__content {
+        margin-top: 144px;
+    }
+}

@@ -104,6 +104,10 @@
 }
 
 @media screen and (max-width: 320px) {
+    .profile {
+        margin: 0 30px;
+    }
+
     .profile__title {
         margin-top: 70px;
     }

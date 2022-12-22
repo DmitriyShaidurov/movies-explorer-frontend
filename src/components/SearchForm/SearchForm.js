@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./SearchForm.css";
-import searchIcon from "../../images/tumbler.svg";
 import liked from "../../images/tumbler.svg";
-// import notLiked from "../../images/notLiked.svg";
+import notLiked from "../../images/disTumbler.svg";
 
 function SearchForm() {
-  /* const [isFilter, setIsFilter] = useState(false);
+  const [isFilter, setIsFilter] = useState(false);
 
-    function handleSwitchFilter() {
-        setIsFilter(!isFilter)
-    } */
+  function handleSwitchFilter() {
+    setIsFilter(!isFilter);
+  }
 
   return (
     <div className="search">
@@ -18,8 +17,8 @@ function SearchForm() {
         <button className="search__submit">Найти</button>
       </form>
       <div className="search__filter-container">
-        <button /* onClick={handleSwitchFilter} */ className="search__filter-button">
-          <img className="search__filter" src={liked} /* {isFilter ? FilterActive : FilterDisable} */ alt="Фильтр" />
+        <button onClick={handleSwitchFilter} className="search__filter-button">
+          <img className="search__filter" src={isFilter ? liked : notLiked} alt="Фильтр" />
         </button>
         <p className="search__filter-text">Короткометражки</p>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Promo from "../Promo/Promo";
+import NavTab from "../NavTab/NavTab";
 import AboutProject from "../AboutProject/AboutProject";
 import Techs from "../Techs/Techs";
 import AboutMe from "../AboutMe/AboutMe";
@@ -8,9 +9,10 @@ import "./Main.css";
 function Main() {
   return (
     <section className="main">
-      {/* <Promo /> */}
-      {/* <AboutProject /> */}
-      {/* <Techs /> */}
+      <Promo />
+      <NavTab />
+      <AboutProject />
+      <Techs />
       <AboutMe />
       <Portfolio />
     </section>

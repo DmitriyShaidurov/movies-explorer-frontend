@@ -9,15 +9,31 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-// import { useEffect, useState } from 'react';
+import { useState } from "react";
 import NotFound from "../NotFound/NotFound";
-
+// Есть проблемы с расширением на 320, завтра все недочеты с расширением и недочеты по проекту исправлю.
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isListOpen, setIsListOpen] = useState(false);
+
+  function handleCloseList() {
+    setIsListOpen(false);
+  }
+
+  function handleOpenList() {
+    setIsListOpen(true);
+  }
+
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Header></Header>
+          <Header
+            isListOpen={isListOpen}
+            handleCloseList={handleCloseList}
+            handleOpenList={handleOpenList}
+            isLoggedIn={isLoggedIn}
+          />
           <Main />
           <Footer />
         </Route>
@@ -30,17 +46,31 @@ function App() {
         </Route>
 
         <Route exact path="/movies">
-          <Header />
+          <Header
+            isListOpen={isListOpen}
+            handleCloseList={handleCloseList}
+            handleOpenList={handleOpenList}
+            isLoggedIn={isLoggedIn}
+          />
           <Movies />
           <Footer />
         </Route>
         <Route exact path="/saved-movies">
-          <Header />
+          <Header
+            isListOpen={isListOpen}
+            handleCloseList={handleCloseList}
+            handleOpenList={handleOpenList}
+            isLoggedIn={isLoggedIn}
+          />
           <SavedMovies />
-          {/* <Footer /> */}
         </Route>
         <Route exact path="/profile">
-          <Header />
+          <Header
+            isListOpen={isListOpen}
+            handleCloseList={handleCloseList}
+            handleOpenList={handleOpenList}
+            isLoggedIn={isLoggedIn}
+          />
           <Profile />
         </Route>
         <Route path="*">

@@ -11,7 +11,7 @@
 }
 
 .card:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .card__container-text {
@@ -101,16 +101,24 @@
     .card__image {
         width: 220px;
     }
+
+    .card:last-of-type {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .card {
-        flex-direction: column-reverse;
         width: 300px;
         height: 168px;
     }
 
     .card__image {
         width: 300px;
+    }
+
+
+    .card:last-of-type {
+        margin-bottom: 20px;
     }
 }
