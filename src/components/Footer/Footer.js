@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer__container">
         <p className="footer__copyright">© 2022</p>
         <div className="footer__links">
-          <a href="https://praktikum.yandex.ru/" target="_blank" className="footer__link" rel="noreferrer">
+          <a href="https://practicum.yandex.ru/" target="_blank" className="footer__link" rel="noreferrer">
             Яндекс.Практикум
           </a>
           <a href="https://github.com/dmitriyshaidurov" target="_blank" className="footer__link" rel="noreferrer">
