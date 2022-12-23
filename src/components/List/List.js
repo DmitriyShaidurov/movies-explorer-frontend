@@ -18,18 +18,39 @@ function List(props) {
           <img className="list__exit-icon" src={exit} alt="exit-list" />
         </button>
         <ul className="list__content">
-          <NavLink activeClassName="list__link-active" className="list__link" to="/" exact>
+          <NavLink
+            activeClassName="list__link-active"
+            className="list__link"
+            to="/"
+            exact
+            onClick={props.handleCloseList}
+          >
             Главная
           </NavLink>
-          <NavLink activeClassName="list__link-active" className="list__link" to="/movies">
+          <NavLink
+            activeClassName="list__link-active"
+            className="list__link"
+            to="/movies"
+            onClick={props.handleCloseList}
+          >
             Фильмы
           </NavLink>
-          <NavLink activeClassName="list__link-active" className="list__link" to="/saved-movies">
+          <NavLink
+            activeClassName="list__link-active"
+            className="list__link"
+            to="/saved-movies"
+            onClick={props.handleCloseList}
+          >
             Сохраненые фильмы
           </NavLink>
         </ul>
         <button className="list__link-button">
-          <NavLink activeClassName="list__link-active" className="list__link-profile" to="/profile">
+          <NavLink
+            activeClassName="list__link-active"
+            className="list__link-profile"
+            to="/profile"
+            onClick={props.handleCloseList}
+          >
             Аккаунт
           </NavLink>
           <img className="list__profile-icon" src={profileLink} alt="profile" />

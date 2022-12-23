@@ -39,6 +39,7 @@
     border: none;
     background-color: #202020;
     transition: .5s;
+    padding: 0;
 }
 
 .list__exit:hover {
