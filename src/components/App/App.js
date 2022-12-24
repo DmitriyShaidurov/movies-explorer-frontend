@@ -15,7 +15,7 @@ import NotFound from "../NotFound/NotFound";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isListOpen, setIsListOpen] = useState(false);
-  const [isMainPage, setisMainPage] = useState(true);
+  const [isMainPage, setIsMainPage] = useState(true);
 
   function handleCloseList() {
     setIsListOpen(false);
