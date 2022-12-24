@@ -61,7 +61,7 @@
 .navigation__list {
     display: none;
     border: none;
-    background-color: #202020;
+    background-color: inherit;
     cursor: pointer;
     width: 44px;
     height: 44px;
