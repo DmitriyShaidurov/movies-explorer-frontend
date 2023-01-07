@@ -1,0 +1,161 @@
+.register {
+    padding: 70px 0 0 0;
+    margin: auto;
+    background-color: #202020;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.register__container {
+    max-width: 396px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.register__image {
+    width: 38px;
+    height: 38px;
+    transition: .5s;
+    background-color: #202020;
+}
+
+.register__container-image {
+    align-self: flex-start;
+    width: 38px;
+    height: 38px;
+}
+
+.register__image:hover {
+    opacity: .5;
+}
+
+.register__title {
+    margin: 40px 0 0 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.register__form {
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 396px;
+    width: 100%;
+}
+
+.register__inputName-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 24px 0;
+    padding: 0;
+}
+
+.register__inputName {
+    margin: 0 0 5px 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #8B8B8B;
+}
+
+.register__inputName-container:last-of-type {
+    margin: 0 0 65px 0;
+}
+
+.register__input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    background-color: #202020;
+    padding-bottom: 10px;
+    max-width: 396px;
+    border-right: #fff 1px;
+    outline: none;
+}
+
+.register__submit {
+    padding: 0;
+    margin: 69px 0 0 0;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #4285F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.register__content {
+    margin: 16px 0 0 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.register__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8B8B8B;
+    margin: 0 6px 0 0;
+    padding: 0;
+}
+
+.register__sign-in {
+    border: none;
+    background-color: #202020;
+    cursor: pointer;
+    transition: .5s;
+    font-family: 'Inter';
+    font-style: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4285F4;
+}
+
+.register__sign-in:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    .register {
+        padding: 232px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .register {
+        padding: 56px 0 0 0;
+    }
+
+    .register__title {
+        align-self: center;
+    }
+
+    .register__container-image {
+        align-self: center;
+    }
+}

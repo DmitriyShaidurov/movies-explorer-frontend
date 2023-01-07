@@ -1,0 +1,50 @@
+.movies {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.movies__button-more {
+    border: none;
+    background-color: #202020;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 320px;
+    height: 36px;
+    margin: 50px auto 0;
+    transition: .5s;
+    border: 1px solid #424242;
+}
+
+.movies__button-more:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    .movies__container {
+        margin: 119px 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .movies__container {
+        margin: 50px 10px;
+    }
+
+    .movies__button-more {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        align-self: center;
+    }
+}

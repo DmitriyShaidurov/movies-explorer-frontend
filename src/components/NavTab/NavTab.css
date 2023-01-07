@@ -1,0 +1,36 @@
+.navTab__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: #2F2F2F;
+}
+
+.navTab__about {
+    font-family: 'Inter';
+    font-size: 13px;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: underline;
+    width: 67px;
+    height: 18px;
+    color: #fff;
+    margin: 24px 20px;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navTab__about:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 550px) {
+    .navTab__about {
+        margin: 25px 12px;
+        font-size: 11px;
+    }
+}
