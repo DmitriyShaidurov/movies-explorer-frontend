@@ -1,0 +1,218 @@
+.project {
+    padding: 0 70px 110px 70px;
+
+}
+
+.project__title {
+    margin: 110px 0 0 0;
+    font-family: 'Inter';
+    font-size: 22px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    padding-bottom: 23px;
+    border-bottom: 1px #DADADA solid;
+    color: #fff;
+}
+
+.project__content {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.project__content-table {
+    width: 100%;
+}
+
+.project__content-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFF;
+    margin: 0;
+}
+
+.project__content-subtitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    max-width: 550px;
+    width: 100%;
+    margin: 26px 0 0 0;
+}
+
+.project__time-line-first-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.project__time-line-second-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.project__time-line {
+    margin: 110px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.project__time-line-first {
+    font-family: 'Inter';
+    background-color: #3DDC84;
+    max-width: 228px;
+    height: 36px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__time-line-first-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin: 0;
+}
+
+.project__time-line-second {
+    background-color: #303030;
+    max-width: 912px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__time-line-second-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    color: #fff;
+}
+
+.project__time-line-first-under {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8b8b8b;
+    max-width: 228px;
+    width: 100%;
+    text-align: center;
+    margin: 14px 0 0 0;
+}
+
+.project__time-line-second-under {
+    font-family: 'Inter';
+    max-width: 910px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8b8b8b;
+    text-align: center;
+    margin: 14px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        padding: 0 50px 90px;
+    }
+
+    .project__content-subtitle {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .project__content-table {
+        margin-right: 30px;
+    }
+
+    .project__content-table:last-of-type {
+        margin: 0;
+    }
+
+    .project__time-line-first {
+        max-width: 140px;
+    }
+
+    .project__time-line-first-under {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .project {
+        padding: 0 18px 70px 18px;
+    }
+
+    .project__title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .project__content {
+        margin: 60px auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 284px;
+    }
+
+    .project__content-table:last-child {
+        margin-top: 56px;
+    }
+
+    .project__content-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .project__content-subtitle {
+        font-size: 11px;
+        line-height: 16px;
+        margin-top: 16px;
+    }
+
+    .project__content-table {
+        margin-right: 0;
+        margin-top: 56px;
+    }
+
+    .project__content-table:first-child {
+        margin: 0;
+    }
+
+    .project__time-line-first {
+        max-width: 100px;
+        height: 35px;
+    }
+
+    .project__time-line-first-under {
+        max-width: 100px;
+    }
+
+    .project__time-line {
+        margin-top: 60px;
+    }
+}
