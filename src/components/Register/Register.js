@@ -94,3 +94,25 @@ function Register(props) {
 }
 
 export default Register;
+
+/* server {
+  listen 80;
+
+  server_name api.dmitriysh.nomoredomains.club;
+
+  location / {
+            proxy_pass http://localhost:3001;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+  }
+
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/api.dmitriysh.nomoredomains.club/full>
+ssl_certificate_key /etc/letsencrypt/live/api.dmitriysh.nomoredomains.club/>
+include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+} */
