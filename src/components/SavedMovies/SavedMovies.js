@@ -12,6 +12,7 @@ function SavedMovies({ toggleLike, movieAdded, savedMovies }) {
 
   useEffect(() => {
     setShowFoundMovies(savedMovies);
+    console.log(savedMovies);
   }, [savedMovies]);
 
   const filterMovies = (movies) => movies.filter((item) => item.duration < durationMovie);
@@ -51,7 +52,7 @@ function SavedMovies({ toggleLike, movieAdded, savedMovies }) {
             movieAdded={movieAdded}
           />
         ) : (
-          <h3 className="text-nothing-found">Ничего не найдено</h3>
+          <h3 className="text-nothing-found">123</h3>
         )}
         ;
       </div>

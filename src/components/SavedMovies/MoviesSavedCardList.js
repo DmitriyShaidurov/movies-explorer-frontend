@@ -5,6 +5,7 @@ import Preloader from "../Preloader/Preloader";
 import { desktop, phone } from "../../utils/const";
 
 function MoviesCardList({ showFoundMovies, preloader, toggleLike, movieAdded }) {
+  console.log(showFoundMovies);
   return (
     <div className="card-list">
       {showFoundMovies.length !== 0 ? (
@@ -28,7 +29,7 @@ function MoviesCardList({ showFoundMovies, preloader, toggleLike, movieAdded }) 
           )}
         </>
       ) : (
-        <h3 className="text-nothing-found">Ничего не найдено</h3>
+        <h3 className="text-nothing-found">123</h3>
       )}
     </div>
   );

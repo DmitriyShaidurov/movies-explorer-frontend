@@ -13,7 +13,7 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
 
   return (
     <>
-      <Route path="/movies">
+      <>
         <div className="card">
           <div className="card__content">
             <div className="card__container-text">
@@ -30,7 +30,7 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
             <img className="card__image" src={card.image} alt="Обложка" />
           </a>
         </div>
-      </Route>
+      </>
     </>
   );
 }

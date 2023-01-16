@@ -35,7 +35,6 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [moviesList, setMoviesList] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
-
   function handleCloseList() {
     setIsListOpen(false);
   }
@@ -116,6 +115,8 @@ function App() {
           const currentUserSavedMovies = saveMovie.filter((m) => {
             return m.owner._id === currentUser._id;
           });
+          console.log(currentUserSavedMovies);
+          console.log(currentUser._id);
           setSavedMovies(currentUserSavedMovies);
         })
         .catch((err) => console.log(err))
@@ -123,7 +124,7 @@ function App() {
           setPreloader(false);
         });
     }
-  }, [isLoggedIn, currentUser._id]);
+  }, [isLoggedIn]);
 
   const handleSaveMovie = (movie) => {
     console.log(movie);
@@ -137,11 +138,10 @@ function App() {
   };
 
   const handleDeleteMovie = (movie) => {
-    /* console.log(movie.movieId); */
+    console.log(movie);
     const movieId = movie._id
       ? movie._id
       : savedMovies.find((item) => {
-          console.log(item);
           return item.movieId === movie.id;
         })._id;
 
@@ -159,8 +159,8 @@ function App() {
       });
   };
 
-  /* const toggleLike = (movie, added) => (added ? handleSaveMovie(movie) : handleDeleteMovie(movie)); */
-  const toggleLike = (movie) => handleSaveMovie(movie);
+  const toggleLike = (movie, added) => (added ? handleSaveMovie(movie) : handleDeleteMovie(movie));
+  // const toggleLike = (movie) => handleSaveMovie(movie);
 
   const movieAdded = (movie) => {
     return savedMovies.find((item) => {
@@ -241,10 +241,10 @@ function App() {
             <Footer />
           </Route>
 
-          <Route path="/signup">
+          <Route path="/signup" exact>
             <Register handleRegister={handleRegister} preloader={preloader} />
           </Route>
-          <Route path="/signin">
+          <Route path="/signin" exact>
             <Login handleAuth={handleSignin} />
           </Route>
           <ProtectedRoute isLoggedIn={isLoggedIn} path="/movies" exact>

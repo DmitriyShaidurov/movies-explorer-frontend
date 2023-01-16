@@ -5,7 +5,7 @@ import { MOVIE_URL } from "../../utils/const";
 import { Route } from "react-router-dom";
 
 function MoviesCard({ card, toggleLike, movieAdded }) {
-  let added = movieAdded;
+  let added = movieAdded(card);
 
   function handleSaveCard(e) {
     e.preventDefault();
