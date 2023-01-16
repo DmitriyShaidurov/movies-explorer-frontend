@@ -1,16 +1,14 @@
-import React from "react";
-import "./MoviesCard.css";
-import primer from "../../images/primer.svg";
-import { MOVIE_URL } from "../../utils/const";
+import React, { useEffect, useState } from "react";
+import "../MoviesCard/MoviesCard";
 import { Route } from "react-router-dom";
+import { desktop } from "../../utils/const";
 
 function MoviesCard({ card, toggleLike, movieAdded }) {
-  let added = movieAdded;
+  let added = movieAdded(card);
 
   function handleSaveCard(e) {
     e.preventDefault();
     toggleLike(card, !added);
-    /* e.target.classList.toggle("card__save_active"); */
   }
 
   return (
@@ -29,7 +27,7 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
             />
           </div>
           <a href={card.trailerLink} rel="noreferrer" target="_blank">
-            <img className="card__image" src={`${MOVIE_URL}` + card.image.url} alt="Обложка" />
+            <img className="card__image" src={card.image} alt="Обложка" />
           </a>
         </div>
       </Route>

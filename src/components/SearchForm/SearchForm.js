@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SearchForm.css";
 import liked from "../../images/tumbler.svg";
 import notLiked from "../../images/disTumbler.svg";
 
-function SearchForm() {
+function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
   const [isFilter, setIsFilter] = useState(false);
 
-  function handleSwitchFilter() {
-    setIsFilter(!isFilter);
-  }
+  const [text, setText] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    searchMovies(text);
+  }
   return (
     <div className="search">
-      <form className="search__form">
+      <form className="search__form" onSubmit={handleSubmit}>
         <input required className="search__input" type="text" name="search" id="searchFilm" placeholder="Фильм" />
         <button className="search__submit">Найти</button>
       </form>
       <div className="search__filter-container">
-        <button onClick={handleSwitchFilter} className="search__filter-button">
-          <img className="search__filter" src={isFilter ? liked : notLiked} alt="Фильтр" />
+        <button onClick={toggleFilterDuration} className="search__filter-button">
+          <img className="search__filter" src={filter ? liked : notLiked} alt="Фильтр" />
         </button>
         <p className="search__filter-text">Короткометражки</p>
       </div>
