@@ -10,7 +10,6 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
   function handleSaveCard(e) {
     e.preventDefault();
     toggleLike(card, !added);
-    /* e.target.classList.toggle("card__save_active"); */
   }
 
   return (

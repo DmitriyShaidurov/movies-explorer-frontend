@@ -160,7 +160,6 @@ function App() {
   };
 
   const toggleLike = (movie, added) => (added ? handleSaveMovie(movie) : handleDeleteMovie(movie));
-  // const toggleLike = (movie) => handleSaveMovie(movie);
 
   const movieAdded = (movie) => {
     return savedMovies.find((item) => {

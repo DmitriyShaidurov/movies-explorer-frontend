@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../MoviesCardList/MoviesCardList";
 import MoviesCardSaved from "./MoviesCardSaved";
 import Preloader from "../Preloader/Preloader";
-import { desktop, phone } from "../../utils/const";
 
 function MoviesCardList({ showFoundMovies, preloader, toggleLike, movieAdded }) {
   console.log(showFoundMovies);

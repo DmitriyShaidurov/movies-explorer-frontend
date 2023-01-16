@@ -52,7 +52,7 @@ function SavedMovies({ toggleLike, movieAdded, savedMovies }) {
             movieAdded={movieAdded}
           />
         ) : (
-          <h3 className="text-nothing-found">123</h3>
+          <h3 className="text-nothing-found">Ничего не найдено</h3>
         )}
         ;
       </div>
