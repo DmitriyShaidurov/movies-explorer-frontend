@@ -7,6 +7,11 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
   const [isFilter, setIsFilter] = useState(false);
 
   const [text, setText] = useState("");
+  console.log(text);
+
+  function textHandler(e) {
+    setText(e.target.value);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -15,7 +20,15 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
   return (
     <div className="search">
       <form className="search__form" onSubmit={handleSubmit}>
-        <input required className="search__input" type="text" name="search" id="searchFilm" placeholder="Фильм" />
+        <input
+          required
+          className="search__input"
+          type="text"
+          name="search"
+          id="searchFilm"
+          placeholder="Фильм"
+          onChange={textHandler}
+        />
         <button className="search__submit">Найти</button>
       </form>
       <div className="search__filter-container">
