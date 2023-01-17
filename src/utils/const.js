@@ -1,5 +1,5 @@
-/* const BASE_URL = "https://api.dmitriysh.nomoredomains.club/api"; */
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "https://api.dmitriysh.nomoredomains.club/api";
+/* const BASE_URL = "http://localhost:3001"; */
 const MOVIE_URL = "https://api.nomoreparties.co";
 
 const desktop = 500;

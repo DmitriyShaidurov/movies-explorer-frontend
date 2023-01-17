@@ -12,7 +12,6 @@ function SavedMovies({ toggleLike, movieAdded, savedMovies }) {
 
   useEffect(() => {
     setShowFoundMovies(savedMovies);
-    console.log(savedMovies);
   }, [savedMovies]);
 
   const filterMovies = (movies) => movies.filter((item) => item.duration < durationMovie);

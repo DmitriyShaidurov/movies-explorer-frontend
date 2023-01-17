@@ -289,3 +289,80 @@ function App() {
 }
 
 export default App;
+
+/* server {
+  listen 80;
+
+  server_name api.dmitriysh.nomoredomains.club;
+
+ root /home/dmitriysh/movies-frontend;
+
+  location / {
+
+      try_files $uri $uri/ /index.html;
+  }
+
+
+  location /api/ {
+            proxy_pass http://localhost:3001/;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+  }
+
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/api.dmitriysh.nomoredomains.club/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/api.dmitriysh.nomoredomains.club/privkey.pem; # managed by Certbot
+include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+} */
+
+//
+
+/* server {
+  listen 80;
+
+  server_name dmitriy47.students.nomoredomains.icu;
+
+#       root /home/dmitriysh/react-mesto-api-full;
+
+  location / {
+          proxy_pass http://localhost:3001;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection 'upgrade';
+          proxy_set_header Host $host;
+          proxy_cache_bypass $http_upgrade;
+  }
+
+
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/dmitriy47front.nomoredomains.club/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/dmitriy47front.nomoredomains.club/privkey.pem; # managed by Certbot
+include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+  listen 80;
+
+  server_name dmitriy47front.nomoredomains.club;
+
+  root /home/dmitriysh/react-mesto-api-full;
+
+  location / {
+
+          try_files $uri $uri/ /index.html;
+  }
+
+listen 443 ssl; # managed by Certbot
+ssl_certificate /etc/letsencrypt/live/dmitriy47front.nomoredomains.club/fullchain.pem; # managed by Certbot
+ssl_certificate_key /etc/letsencrypt/live/dmitriy47front.nomoredomains.club/privkey.pem; # managed by Certbot
+include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+} */
