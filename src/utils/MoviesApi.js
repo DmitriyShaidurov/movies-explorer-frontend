@@ -13,7 +13,7 @@ const getMovies = () =>
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      authorization: "Bearer ca5a3c83-c808-4b2d-aa04-cb48fd881373",
+      // authorization: "Bearer ca5a3c83-c808-4b2d-aa04-cb48fd881373",
     },
   }).then((res) => parseResponse(res));
 
