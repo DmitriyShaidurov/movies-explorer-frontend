@@ -115,8 +115,6 @@ function App() {
           const currentUserSavedMovies = saveMovie.filter((m) => {
             return m.owner._id === currentUser._id;
           });
-          console.log(currentUserSavedMovies);
-          console.log(currentUser._id);
           setSavedMovies(currentUserSavedMovies);
         })
         .catch((err) => console.log(err))

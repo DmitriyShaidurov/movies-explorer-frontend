@@ -7,7 +7,7 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
   const [isFilter, setIsFilter] = useState(false);
 
   const [text, setText] = useState("");
-  console.log(text);
+  console.log(filter);
 
   function textHandler(e) {
     setText(e.target.value);

@@ -40,9 +40,18 @@ function SavedMovies({ toggleLike, movieAdded, savedMovies }) {
     }, 300);
   }
 
+  const toggleFilterDuration = () => {
+    setfilter(!filter);
+  };
+
   return (
     <section className="saved-movies">
-      <SearchForm searchMovies={searchMovies} filter={filter} onFilter={onFilter} />
+      <SearchForm
+        searchMovies={searchMovies}
+        filter={filter}
+        onFilter={onFilter}
+        toggleFilterDuration={toggleFilterDuration}
+      />
       <div className="saved-movies__container">
         {savedMovies.length !== 0 || showFoundMovies.length !== 0 ? (
           <MoviesSavedCardList
