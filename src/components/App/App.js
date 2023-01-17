@@ -270,7 +270,7 @@ function App() {
             />
             <SavedMovies savedMovies={savedMovies} movieAdded={movieAdded} toggleLike={toggleLike} />
           </ProtectedRoute>
-          <Route exact path="/profile">
+          <ProtectedRoute exact path="/profile" isLoggedIn={isLoggedIn}>
             <Header
               isListOpen={isListOpen}
               handleCloseList={handleCloseList}
@@ -278,7 +278,7 @@ function App() {
               isLoggedIn={isLoggedIn}
             />
             <Profile signOut={handleSignOut} handleUpdateProfile={handleUpdateProfile} />
-          </Route>
+          </ProtectedRoute>
           <Route path="*">
             <NotFound />
           </Route>
