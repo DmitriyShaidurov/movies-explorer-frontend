@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import Preloader from "../Preloader/Preloader";
-import { desktop, phone } from "../../utils/const";
+import { desktop } from "../../utils/const";
 
 function MoviesCardList({ moviesList, preloader, toggleLike, movieAdded }) {
   const [showMoviesList, setShowMoviesList] = useState([]);
