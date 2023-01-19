@@ -4,7 +4,6 @@ import MoviesCardSaved from "./MoviesCardSaved";
 import Preloader from "../Preloader/Preloader";
 
 function MoviesCardList({ showFoundMovies, preloader, toggleLike, movieAdded }) {
-  console.log(showFoundMovies);
   return (
     <div className="card-list">
       {showFoundMovies.length !== 0 ? (

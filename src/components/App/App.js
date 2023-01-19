@@ -88,7 +88,6 @@ function App() {
   // Регистрация
 
   function handleRegister({ name, email, password }) {
-    console.log(name, email, password);
     setPreloader(true);
     return register(name, email, password)
       .then((res) => {
@@ -126,7 +125,6 @@ function App() {
   }, [isLoggedIn]);
 
   const handleSaveMovie = (movie) => {
-    console.log(movie);
     saveMovie(movie)
       .then((res) => {
         setSavedMovies([...savedMovies, res]);
@@ -137,7 +135,6 @@ function App() {
   };
 
   const handleDeleteMovie = (movie) => {
-    console.log(movie);
     const movieId = movie._id
       ? movie._id
       : savedMovies.find((item) => {
@@ -205,7 +202,6 @@ function App() {
         movie.nameRU?.toLowerCase().includes(data.toLowerCase())
       );
     });
-    console.log(filteredMovies);
 
     setMoviesList(filteredMovies);
     localStorage.setItem("allMovies", JSON.stringify(filteredMovies));
@@ -220,6 +216,7 @@ function App() {
   function handleSignOut() {
     setPreloader(false);
     localStorage.removeItem("jwt");
+    localStorage.removeItem("input");
     setIsLoggedIn(false);
     setMovies([]);
     handleCloseList();

@@ -13,7 +13,7 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
   function handleSubmit(e) {
     e.preventDefault();
     searchMovies(text);
-    setText(text);
+    localStorage.setItem("input", text);
   }
   return (
     <div className="search">
@@ -26,7 +26,7 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
           id="searchFilm"
           placeholder="Фильм"
           onChange={textHandler}
-          value={text}
+          value={text.length !== 0 ? text : localStorage.getItem("input")}
         />
         <button className="search__submit">Найти</button>
       </form>

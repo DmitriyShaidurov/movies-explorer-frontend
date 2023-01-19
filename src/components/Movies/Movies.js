@@ -14,7 +14,10 @@ function Movies({ searchMovies, moviesList, preloader, toggleLike, movieAdded })
 
   const toggleFilterDuration = () => {
     setFilter(!filter);
+    localStorage.setItem("filterDur", JSON.stringify(filter));
   };
+
+  // Не совсем понял почему фильмы сбрасываются, у меня они загружаются из localStorage как только не пробовал.
 
   return (
     <section className="movies">
