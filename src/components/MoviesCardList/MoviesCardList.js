@@ -76,7 +76,15 @@ function MoviesCardList({ moviesList, preloader, toggleLike, movieAdded }) {
       ) : (
         <h3 className="text-nothing-found">Ничего не найдено</h3>
       )}
-      <button className="movies__button-more" type="button" onClick={showMore}>
+      <button
+        className={
+          showMoviesList.length !== moviesList.length
+            ? "movies__button-more"
+            : "movies__button-more movies__button-more_blur"
+        }
+        type="button"
+        onClick={showMore}
+      >
         Ещё
       </button>
     </div>

@@ -35,6 +35,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [moviesList, setMoviesList] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
+  const [profileSuccessful, setProfileSuccessful] = useState(false);
   function handleCloseList() {
     setIsListOpen(false);
   }
@@ -179,9 +180,11 @@ function App() {
       .then((res) => {
         setPreloader(true);
         setCurrentUser(res);
+        setProfileSuccessful(true);
       })
       .catch((err) => {
         console.log(err);
+        setProfileSuccessful(false);
       })
       .finally(() => {
         setTimeout(() => {
@@ -202,6 +205,7 @@ function App() {
         movie.nameRU?.toLowerCase().includes(data.toLowerCase())
       );
     });
+    console.log(filteredMovies);
 
     setMoviesList(filteredMovies);
     localStorage.setItem("allMovies", JSON.stringify(filteredMovies));
@@ -277,7 +281,11 @@ function App() {
               handleOpenList={handleOpenList}
               isLoggedIn={isLoggedIn}
             />
-            <Profile signOut={handleSignOut} handleUpdateProfile={handleUpdateProfile} />
+            <Profile
+              signOut={handleSignOut}
+              handleUpdateProfile={handleUpdateProfile}
+              profileSuccessful={profileSuccessful}
+            />
           </ProtectedRoute>
           <Route path="*">
             <NotFound />

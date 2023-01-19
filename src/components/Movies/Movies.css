@@ -26,6 +26,10 @@
     border: 1px solid #424242;
 }
 
+.movies__button-more_blur {
+    display: none;
+}
+
 .movies__button-more:hover {
     opacity: .5;
 }

@@ -12,6 +12,12 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
     toggleLike(card, !added);
   }
 
+  function timeChanger(data) {
+    let hour = Math.trunc(data / 60);
+    let minute = data % 60;
+    return hour + "ч " + minute + "м";
+  }
+
   return (
     <>
       <Route path="/movies">
@@ -19,7 +25,7 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
           <div className="card__content">
             <div className="card__container-text">
               <h2 className="card__title">{card.nameRU}</h2>
-              <p className="card__subtitle">{card.duration}</p>
+              <p className="card__subtitle">{timeChanger(card.duration)}</p>
             </div>
             <button
               onClick={handleSaveCard}

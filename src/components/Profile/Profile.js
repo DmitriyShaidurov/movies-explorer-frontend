@@ -8,14 +8,12 @@ function Profile(props) {
   const [name, setName] = useState(currentUser.name);
   const [email, setEmail] = useState(currentUser.email);
 
-  /* useEffect(() => {
-    if (currentUser.name) {
-      setName(currentUser.name);
-    }
-    if (currentUser.email) {
-      setEmail(currentUser.email);
-    }
-  }, [currentUser.name, currentUser.email]); */
+  console.log(props);
+
+  useEffect(() => {
+    setName(currentUser.name);
+    setEmail(currentUser.email);
+  }, [currentUser]);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -62,7 +60,16 @@ function Profile(props) {
             value={email}
           />
         </div>
-        <button className="profile__button">Редактировать</button>
+        {props.profileSuccessful && <span className="profile__form-successful">Ваш профиль был успешно изменен.</span>}
+        <button
+          className={
+            currentUser.email !== email || currentUser.name !== name
+              ? "profile__button"
+              : "profile__button profile__button_blur"
+          }
+        >
+          Редактировать
+        </button>
       </form>
       <Link to="/">
         <button className="profile__button profile__button_logout" onClick={props.signOut}>

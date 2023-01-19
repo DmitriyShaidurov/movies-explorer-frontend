@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./SearchForm.css";
 import liked from "../../images/tumbler.svg";
 import notLiked from "../../images/disTumbler.svg";
 
 function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
-  const [isFilter, setIsFilter] = useState(false);
-
   const [text, setText] = useState("");
 
   function textHandler(e) {
@@ -15,6 +13,7 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
   function handleSubmit(e) {
     e.preventDefault();
     searchMovies(text);
+    setText(text);
   }
   return (
     <div className="search">
@@ -27,6 +26,7 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
           id="searchFilm"
           placeholder="Фильм"
           onChange={textHandler}
+          value={text}
         />
         <button className="search__submit">Найти</button>
       </form>
