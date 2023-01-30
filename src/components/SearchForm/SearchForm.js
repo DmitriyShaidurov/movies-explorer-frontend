@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SearchForm.css";
 import liked from "../../images/tumbler.svg";
 import notLiked from "../../images/disTumbler.svg";
@@ -15,6 +15,12 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
     searchMovies(text);
     localStorage.setItem("input", text);
   }
+
+  useEffect(() => {
+    const inputForm = localStorage.getItem("input");
+    setText(inputForm);
+  }, []);
+
   return (
     <div className="search">
       <form className="search__form" onSubmit={handleSubmit}>
@@ -26,7 +32,7 @@ function SearchForm({ searchMovies, toggleFilterDuration, filter }) {
           id="searchFilm"
           placeholder="Фильм"
           onChange={textHandler}
-          value={text.length !== 0 ? text : localStorage.getItem("input")}
+          value={text}
         />
         <button className="search__submit">Найти</button>
       </form>

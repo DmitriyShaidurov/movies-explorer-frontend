@@ -113,7 +113,8 @@ function App() {
           setCurrentUser(user);
           setMovies(moviesList);
           const currentUserSavedMovies = saveMovie.filter((m) => {
-            return m.owner._id === currentUser._id;
+            console.log(m);
+            return m.owner.id === currentUser._id;
           });
           setSavedMovies(currentUserSavedMovies);
         })
@@ -217,6 +218,7 @@ function App() {
     setPreloader(false);
     localStorage.removeItem("jwt");
     localStorage.removeItem("input");
+    localStorage.removeItem("filterDur");
     setIsLoggedIn(false);
     setMovies([]);
     handleCloseList();

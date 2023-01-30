@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Movies.css";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
@@ -13,9 +13,16 @@ function Movies({ searchMovies, moviesList, preloader, toggleLike, movieAdded })
     });
 
   const toggleFilterDuration = () => {
-    setFilter(!filter);
-    localStorage.setItem("filterDur", JSON.stringify(filter));
+    const newFilter = !filter;
+    localStorage.setItem("filterDur", JSON.stringify(newFilter));
+    setFilter(newFilter);
   };
+
+  useEffect(() => {
+    const filterDur = localStorage.getItem("filterDur");
+    setFilter(filterDur === "true");
+    console.log(filterDur);
+  }, []);
 
   // Не совсем понял почему фильмы сбрасываются, у меня они загружаются из localStorage как только не пробовал.
 

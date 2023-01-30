@@ -8,8 +8,6 @@ function Profile(props) {
   const [name, setName] = useState(currentUser.name);
   const [email, setEmail] = useState(currentUser.email);
 
-  console.log(currentUser.name);
-
   useEffect(() => {
     setName(currentUser.name);
     setEmail(currentUser.email);
