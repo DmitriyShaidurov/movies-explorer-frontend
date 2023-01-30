@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../images/logo.svg";
 import { Link } from "react-router-dom";
+import Preloader from "../Preloader/Preloader";
 
-function Login() {
+function Login(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const passwordHandler = (e) => {
+    setPassword(e.target.value);
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.handleAuth(email, password);
+  }
+
   return (
     <section className="login">
       <div className="login__container">
@@ -13,7 +30,7 @@ function Login() {
           </Link>
         </div>
         <h2 className="login__title">Рады видеть!</h2>
-        <form className="login__form">
+        <form className="login__form" onSubmit={handleSubmit}>
           <div className="login__inputName-container">
             <p className="login__inputName">E-mail</p>
             <input
@@ -23,6 +40,7 @@ function Login() {
               name="login-email"
               placeholder="E-mail"
               id="loginEmail"
+              onChange={emailHandler}
             />
           </div>
 
@@ -35,6 +53,7 @@ function Login() {
               name="login-password"
               placeholder="Пароль"
               id="loginPassword"
+              onChange={passwordHandler}
             />
           </div>
           <button className="login__submit" type="submit">
@@ -48,6 +67,7 @@ function Login() {
           </Link>
         </div>
       </div>
+      {props.Preloader && <Preloader />}
     </section>
   );
 }

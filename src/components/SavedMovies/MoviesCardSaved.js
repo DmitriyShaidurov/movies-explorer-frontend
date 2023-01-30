@@ -1,8 +1,7 @@
-import React from "react";
-import "./MoviesCard.css";
-import primer from "../../images/primer.svg";
-import { MOVIE_URL } from "../../utils/const";
+import React, { useEffect, useState } from "react";
+import "../MoviesCard/MoviesCard";
 import { Route } from "react-router-dom";
+import { desktop } from "../../utils/const";
 
 function MoviesCard({ card, toggleLike, movieAdded }) {
   let added = movieAdded(card);
@@ -20,7 +19,7 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
 
   return (
     <>
-      <Route path="/movies">
+      <>
         <div className="card">
           <div className="card__content">
             <div className="card__container-text">
@@ -30,14 +29,14 @@ function MoviesCard({ card, toggleLike, movieAdded }) {
             <button
               onClick={handleSaveCard}
               type="button"
-              className={added ? "card__save_active card__save" : "card__save"}
+              className={added ? "card__saved_active card__save" : "card__save"}
             />
           </div>
           <a href={card.trailerLink} rel="noreferrer" target="_blank">
-            <img className="card__image" src={`${MOVIE_URL}` + card.image.url} alt="Обложка" />
+            <img className="card__image" src={card.image} alt="Обложка" />
           </a>
         </div>
-      </Route>
+      </>
     </>
   );
 }
